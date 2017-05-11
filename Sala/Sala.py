@@ -1,4 +1,4 @@
-﻿sala = [['001','150','Disponivel'],['002','200','Ocupada']]
+sala = [['001','150','Disponivel'],['002','200','Ocupada']]
 
 def adicionar_sala(cod_sala,lotacao,status): ############### PRONTO ################
     sala_inter=[cod_sala,lotacao,status]
@@ -8,15 +8,14 @@ def adicionar_sala(cod_sala,lotacao,status): ############### PRONTO ############
 def buscar_sala(cod_sala): ####################### PRONTO #######################
         for i in sala:
             if (i[0]== cod_sala):
-                print (i)
-
-        
+                return i
+        return
 
 def definir_status_ocupada(cod_sala):####################### PRONTO #######################
     for t in range(len(sala)):
         for i in sala:
             if cod_sala == i[0]:
-                i [t][2]=('Ocupadasss')
+                i [t][2]=('Ocupada')
                 return i
 
 def remover_sala(cod_sala):####################### PRONTO #######################
@@ -56,24 +55,3 @@ def definir_status_disponivel(cod_sala): ####################### PRONTO ########
                 print(" \n \n ========= Alterado com Sucesso ============")
                 return True
     print(" \n \n ========= Não encontrado ============")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
