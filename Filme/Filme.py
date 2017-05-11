@@ -6,10 +6,10 @@ def cadastrar_filme(cod_filme,titulo,duracao,classificacao,diretor,distribuidora
     print (" \n \n ========= Cadastrado com Sucesso ============")
     
 def buscar_filme(cod_filme):
-     for i in filmes:
-        if (i[0]== cod_filme):
-            print (i)
-
+    for i in filmes:
+        if (i[0]== cod_filme):  
+            return i
+    return 
 
 def listar_filmes():
     for i in filmes:
