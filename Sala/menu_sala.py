@@ -1,10 +1,5 @@
 import controller_altera
 
-
-REMOVER_SALA = 6
-
-
-
 while 1==1:
     print ('\n 1 - Adiciona Sala: \n','2 - Definir status ocupado: \n',
            '3 - Definir status livre: \n','4 - Buscar sala: \n',
@@ -20,7 +15,7 @@ while 1==1:
         controller_altera.opcao4()
     elif escolhe == 5:
         controller_altera.opcao5()
-    elif escolhe == REMOVER_SALA:
+    elif escolhe == 6:
         controller_altera.removerSala()
     elif escolhe == 7:
         controller_altera.opcao7()
