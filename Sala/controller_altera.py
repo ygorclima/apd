@@ -9,6 +9,10 @@ def opcao4():
         
 def opcao1():
     codigo=str(input("Digite o codigo: "))
+    consulta=Sala.buscar_sala(codigo)
+    while consulta != None:
+        codigo=str(input("Digite um codigo Valido: "))
+        consulta=Sala.buscar_sala(codigo)
     cap=int(input("Digite a capacidade: "))
     op_status=int(input("\n 1- Ocupado.\n 2- Disponivel \n Digite: "))
     while op_status != 1 and op_status != 2:
