@@ -1,0 +1,47 @@
+ingressos = []
+ingressos_meia = []
+
+def IngressoMeia(cod_sessao):
+    ingressos_meia.append(cod_sessao)
+    print (" ===== Ingresso Meia Cadastrado ===== ")
+    
+def Ingresso(cod_sessao):
+    ingressos.append(cod_sessao)
+    print (" ===== Ingresso Cadastrado ====== ")
+    
+def ListarIngressoVendidos(cod_sessao):
+    pass
+
+def ListarIngresso():
+    for i in ingressos:
+        print ("Ingresso: ",i)
+    for i in ingressos_meia:
+        print ("Ingresso Meia: ", i)
+    
+def BuscaIngresso(cod_ingresso):
+    for i in ingressos:
+        if (i[0] == cod_ingresso):
+            print (i)
+            return i
+    return None
+
+def RemoverIngresso(cod_ingresso):
+    for i in ingressos:
+        if (i[0] == cod_ingresso):
+            ingressos.remove(i)
+            print (" ==== Ingresso removido ====")
+            return True
+    print (" ==== Ingresso não encontrado ===== ")
+    return False
+            
+def RemoverTodosIngresso():
+    global ingressos
+    global ingressos_meia
+    ingressos = []
+    ingressos_meia = []
+    print (" ====== Ingressos removidos ======= ")
+    return ingressos
+
+def IniciarIngresso():
+    Ingresso(1)
+    Ingresso(2)
