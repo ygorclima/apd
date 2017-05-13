@@ -1,5 +1,5 @@
 from elenco import Elenco
-
+#from elenco import ControllerElenco 
 def ShowMenu():
     print ("\n =========== MENU ELENCO ============= ")
     print ("1 - Adicionar ator")
@@ -10,7 +10,7 @@ def ShowMenu():
     print ("6 - Remover todos atores")
     print ("0 - Voltar")
     opc = input("Digite o NÚMERO da opção: ")
-
+    #ControllerElenco.IniciarElenco()
     if (opc == "1"):
         Elenco.AdicionarAtor()
         ShowMenu()
