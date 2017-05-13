@@ -1,4 +1,4 @@
-import ControllerElenco
+from elenco import ControllerElenco
 
 def AdicionarAtor():
     cod_elenco = int(input("Código: "))
