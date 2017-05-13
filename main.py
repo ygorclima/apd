@@ -1,9 +1,10 @@
-##from Sala import menu_sala
-##from Filme import menu_filme
-from Elenco import *
-import Ator
+import sys
+from ator import MenuAtor
+from elenco import MenuElenco
+from sala import menu_sala
+from filme import menu_filme
 
-def ShowMenu():
+def ShowMenus():
     print ("\n =========== MENU PRINCIPAL ============= ")
     print ("1 - Acessar Menu Ator")
     print ("2 - Acessar Menu Elenco")
@@ -14,8 +15,8 @@ def ShowMenu():
 
     if (opc == "1"):MenuAtor.ShowMenu()
     if (opc == "2"):MenuElenco.ShowMenu()
-##    if (opc == "3"):menu_sala()
-##    if (opc == "4"):menu_filme()
+    if (opc == "3"):menu_sala()
+    if (opc == "4"):menu_filme()
     if (opc == "0"):return
     
-ShowMenu()
+ShowMenus()
