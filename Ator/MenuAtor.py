@@ -1,9 +1,9 @@
-#import ControllerAtor
-import Ator
+#import Controllerator
+from ator import Ator
 
 def ShowMenu():
-    print ("\n =========== MENU ATOR ============= ")
-    print ("1 - Cadastrar Ator")
+    print ("\n =========== MENU ator ============= ")
+    print ("1 - Cadastrar ator")
     print ("2 - Buscar ator")
     print ("3 - Buscar todos atores")
     print ("4 - Remover ator")
@@ -17,6 +17,6 @@ def ShowMenu():
     elif (opc == "4"):Ator.RemoverAtor()
     elif (opc == "5"):Ator.RemoverTodosAtores()
     elif (opc == "0"):MenuPrincipal()
-    ShowMenu()
-#ControllerAtor.IniciarAtores()
-ShowMenu()
+##    ShowMenu()
+#Controllerator.IniciarAtores()
+##ShowMenu()
