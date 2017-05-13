@@ -16,7 +16,7 @@ def opcao2():
         print (volta)
 
 def opcao1():
-    cod_filme=str(input("Digite o codigo: "))
+    cod_filme=str(input("Digite o codigo: "))#testando
     consulta=Filme.buscar_filme(cod_filme)
     while consulta != None:
         cod_filme=str(input("Digite o codigo valido: "))
