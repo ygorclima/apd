@@ -28,7 +28,9 @@ def ShowMenu():
         ShowMenu()
     if (opc == "6"):
         Elenco.RemoverTodosElenco()
-    else:    
+    if (opc == "0"):
+        return (opc)
+    else:
         ShowMenu()
 ##    ShowMenu()
 ##ShowMenu()
