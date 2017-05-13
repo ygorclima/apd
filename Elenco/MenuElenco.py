@@ -1,4 +1,4 @@
-import Elenco
+from elenco import Elenco
 
 def ShowMenu():
     print ("\n =========== MENU ELENCO ============= ")
@@ -17,5 +17,5 @@ def ShowMenu():
     if (opc == "4"):Elenco.BuscarElencoFilme()
     if (opc == "5"):Elenco.RemoverElenco()
     if (opc == "6"):Elenco.RemoverTodosElenco()
-    ShowMenu()
-ShowMenu()
+##    ShowMenu()
+##ShowMenu()
