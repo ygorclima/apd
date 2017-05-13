@@ -1,11 +1,21 @@
 from elenco import ControllerElenco
+from ator import ControllerAtor
+from filme import Controller_Filme
 
 def AdicionarAtor():
     cod_elenco = int(input("Código: "))
     cod_ator = int(input("Código Ator: "))
+    r = ControllerAtor.BuscarAtor(cod_ator)
+    if (r == None):
+        print ("Ator não existe")
+        return (r)   
     cod_filme = int(input("Código Filme: "))
+    r = Controller_Filme.BuscarFilme(cod_filme)
+    if (r == None):
+        print ("Filme não existe")
+        return (r)
     tipo = input("Tipo: ")
-
+    
     ControllerElenco.AdicionarAtor(cod_elenco,cod_ator,cod_filme,tipo)
 
 def BuscarAtoresFilme():
