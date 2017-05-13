@@ -3,6 +3,7 @@ from ator import MenuAtor
 from elenco import MenuElenco
 ##from sala import menu_sala
 ##from filme import menu_filme
+from ingresso import MenuIngresso
 
 def ShowMenus():
     print ("\n =========== MENU PRINCIPAL ============= ")
