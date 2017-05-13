@@ -13,10 +13,17 @@ def ShowMenus():
     print ("0 - Finalizar programa")
     opc = input("Digite o NÚMERO da opção: ")
 
-    if (opc == "1"):MenuAtor.ShowMenu()
-    if (opc == "2"):MenuElenco.ShowMenu()
-    if (opc == "3"):menu_sala()
-    if (opc == "4"):menu_filme()
-    if (opc == "0"):return
+    if (opc == "1"):
+        MenuAtor.ShowMenu()
+        ShowMenus()
+    if (opc == "2"):
+        MenuElenco.ShowMenu()
+        ShowMenus()
+    if (opc == "3"):
+        menu_sala()
+        ShowMenus()
+    if (opc == "4"):
+        menu_filme()
+        ShowMenus()
     
 ShowMenus()
