@@ -1,5 +1,4 @@
 elencos = []
-
 def AdicionarAtor(cod_elenco,cod_ator,cod_filme,tipo):
     elenco = [cod_elenco,cod_ator,cod_filme,tipo]
     elencos.append(elenco)
