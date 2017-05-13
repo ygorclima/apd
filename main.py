@@ -10,6 +10,8 @@ def ShowMenus():
     print ("2 - Acessar Menu Elenco")
     print ("3 - Acessar Menu Sala")
     print ("4 - Acessar Menu Filme")
+    print ("5 - Acessar Menu Ingresso")
+    print ("6 - Acessar Menu Sessao")
     print ("0 - Finalizar programa")
     opc = input("Digite o NÚMERO da opção: ")
 
@@ -23,6 +25,12 @@ def ShowMenus():
         menu_sala()
         ShowMenus()
     if (opc == "4"):
+        menu_filme()
+        ShowMenus()
+    if (opc == "5"):
+        MenuIngresso.ShowMenu()
+        ShowMenus()
+    if (opc == "6"):
         menu_filme()
         ShowMenus()
     
