@@ -1,8 +1,8 @@
 import sys
 from ator import MenuAtor
 from elenco import MenuElenco
-from sala import menu_sala
-from filme import menu_filme
+##from sala import menu_sala
+##from filme import menu_filme
 
 def ShowMenus():
     print ("\n =========== MENU PRINCIPAL ============= ")
