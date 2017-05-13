@@ -11,11 +11,24 @@ def ShowMenu():
     print ("0 - Voltar")
     opc = input("Digite o NÚMERO da opção: ")
 
-    if (opc == "1"):Elenco.AdicionarAtor()
-    if (opc == "2"):Elenco.BuscarAtoresFilme()
-    if (opc =="3"):Elenco.BuscarElenco()
-    if (opc == "4"):Elenco.BuscarElencoFilme()
-    if (opc == "5"):Elenco.RemoverElenco()
-    if (opc == "6"):Elenco.RemoverTodosElenco()
+    if (opc == "1"):
+        Elenco.AdicionarAtor()
+        ShowMenu()
+    if (opc == "2"):
+        Elenco.BuscarAtoresFilme()
+        ShowMenu()
+    if (opc =="3"):
+        Elenco.BuscarElenco()
+        ShowMenu()
+    if (opc == "4"):
+        Elenco.BuscarElencoFilme()
+        ShowMenu()
+    if (opc == "5"):
+        Elenco.RemoverElenco()
+        ShowMenu()
+    if (opc == "6"):
+        Elenco.RemoverTodosElenco()
+    else:    
+        ShowMenu()
 ##    ShowMenu()
 ##ShowMenu()
