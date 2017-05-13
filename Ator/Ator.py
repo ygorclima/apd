@@ -1,4 +1,4 @@
-import ControllerAtor
+from ator import ControllerAtor
 
 def CadastrarAtor():
     cod_ator = int(input("Código: "))
