@@ -1,12 +1,14 @@
 ingressos = []
-ingressos_meia = []
+#ingressos_meia = []
 
 def IngressoMeia(cod_sessao):
-    ingressos_meia.append(cod_sessao)
+    ing = [cod_sessao, "meia"]
+    ingressos.append(ing)
     print (" ===== Ingresso Meia Cadastrado ===== ")
     
 def Ingresso(cod_sessao):
-    ingressos.append(cod_sessao)
+    ing = [cod_sessao, "inteiro"]
+    ingressos.append(ing)
     print (" ===== Ingresso Cadastrado ====== ")
     
 def ListarIngressoVendidos(cod_sessao):
@@ -15,14 +17,12 @@ def ListarIngressoVendidos(cod_sessao):
 def ListarIngresso():
     for i in ingressos:
         print ("Ingresso: ",i)
-    for i in ingressos_meia:
-        print ("Ingresso Meia: ", i)
     
 def BuscaIngresso(cod_ingresso):
     for i in ingressos:
         if (i[0] == cod_ingresso):
             print (i)
-            return i
+            
     return None
 
 def RemoverIngresso(cod_ingresso):
@@ -36,9 +36,7 @@ def RemoverIngresso(cod_ingresso):
             
 def RemoverTodosIngresso():
     global ingressos
-    global ingressos_meia
     ingressos = []
-    ingressos_meia = []
     print (" ====== Ingressos removidos ======= ")
     return ingressos
 
