@@ -4,7 +4,7 @@ def ShowMenu():
     print ("\n =========== MENU INGRESSO ============= ")
     print ("1 - Venda Ingresso Meia")
     print ("2 - Venda Ingresso Inteira")
-    print ("3 - Listar ingresso inteiro#")
+    print ("3 - Listar ingresso Vendidos")
     print ("4 - Listar ingresso")
     print ("5 - Buscar ingresso")
     print ("6 - Remover ingresso")
