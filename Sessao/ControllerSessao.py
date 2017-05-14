@@ -1,5 +1,6 @@
-sessao = []
+from sala import ControllerSala
 
+sessao = []
 def CriarSessao(cod_sessao,cod_filme,cod_sala,horario):
     aux = [cod_sessao,cod_filme,cod_sala,horario]
     sessao.append(aux)
@@ -13,7 +14,13 @@ def RecuperarSessao(cod_sessao):
     return None
 
 def VerificarLotacao(cod_sessao):
-    print (sessao(cod_sessao))
+    for a in sessao:
+        if (a[0] == cod_sessao):
+            b = ControllerSala.BuscarSala(a[3])
+            l = b[1]
+            print ("Status: ",l)
+            return True
+    return None
 
 def ListarSessao():
     global sessao
