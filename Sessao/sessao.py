@@ -1,16 +1,18 @@
 from sessao import ControllerSessao
-from filme import Controller_filme
-from sala import Sala
+from filme import ControllerFilme
+from sala import ControllerSala
 
 def CriarSessao():
     cod_sessao = int(input("Código Sessão: "))
+
     cod_filme = int(input("Código Filme: "))
-    r = Controller_filme.BuscarFilme(cod_filme)
+    r = ControllerFilme.BuscarFilme(cod_filme)
     if (r == None):
        print ("Filme não existe")
        return (r)
+    
     cod_sala = int(input("Código Sala: "))
-    r = Sala.buscar_sala(cod_sala)
+    r = ControllerSala(cod_sala)
     if (r == None):
         print ("Sala não existe")
         return (r)
