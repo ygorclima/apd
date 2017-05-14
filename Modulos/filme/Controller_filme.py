@@ -1,4 +1,4 @@
-import Filme
+from filme import Filme
 
 # Função que busca o filme pelo código
 def BuscarFilme(cod_filme):
