@@ -28,6 +28,7 @@ def ShowMenu():
         ShowMenu()
     if (opc == "6"):
         Sessao.RemoverTodosSessao()
+        ShowMenu()
     if (opc == "0"):
         return (opc)
     else:
