@@ -12,7 +12,10 @@ def Ingresso(cod_sessao):
     print (" ===== Ingresso Cadastrado ====== ")
     
 def ListarIngressoVendidos(cod_sessao):
-    pass
+    global ingressos
+    qtd = len(ingressos)
+    print (qtd)
+    return qtd
 
 def ListarIngresso():
     for i in ingressos:
