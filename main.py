@@ -1,8 +1,8 @@
 import sys
 from ator import MenuAtor
 from elenco import MenuElenco
-##from sala import menu_sala
-##from filme import menu_filme
+from sala import menu_sala
+from filme import menu_filme
 from ingresso import MenuIngresso
 from sessao import MenuSessao
 def ShowMenus():
@@ -23,10 +23,10 @@ def ShowMenus():
         MenuElenco.ShowMenu()
         ShowMenus()
     if (opc == "3"):
-        menu_sala()
+        MenuSala.ShowMenu()
         ShowMenus()
     if (opc == "4"):
-        menu_filme()
+        MenuFilme.ShowMenu()
         ShowMenus()
     if (opc == "5"):
         MenuIngresso.ShowMenu()
