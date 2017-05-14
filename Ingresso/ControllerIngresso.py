@@ -17,12 +17,13 @@ def ListarIngressoVendidos(cod_sessao):
 def ListarIngresso():
     for i in ingressos:
         print ("Ingresso: ",i)
-    
+        
+    return None
 def BuscaIngresso(cod_ingresso):
     for i in ingressos:
         if (i[0] == cod_ingresso):
             print (i)
-            
+            return (i)
     return None
 
 def RemoverIngresso(cod_ingresso):
@@ -38,7 +39,7 @@ def RemoverTodosIngresso():
     global ingressos
     ingressos = []
     print (" ====== Ingressos removidos ======= ")
-    return ingressos
+    return (ingressos)
 
 def IniciarIngresso():
     Ingresso(1)
