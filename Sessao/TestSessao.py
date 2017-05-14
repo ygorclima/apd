@@ -1,54 +1,38 @@
 import unittest
-import ControllerSala
+import ControllerSessao
 
-class TestSala(unittest.TestCase):
+class TestSessao(unittest.TestCase):
     def setUp(self):
-        ControllerSala.RemoverTodasSalas()
+        ControllerSessao.RemoverTodosSessao()
 
     def test_sem_sessao(self):
-        s = ControllerSala.ListarSala()
+        s = ControllerSessao.ListarSessao()
         self.assertEqual(0, len(s))
         
     def test_adicionar_sessao(self):
-        ControllerSala.AdicionarSala(1,"livre")
-        s = ControllerSala.BuscarSala(1)
-        self.assertEqual(2,len(s))
-        self.assertEqual(1, s[0])
-        self.assertEqual("livre", s[1])
+        ControllerSessao.CriarSessao(1,1,1,"8:30")
+        s = ControllerSessao.ListarSessao()
+        self.assertEqual(1,len(s))
+        
+        self.assertEqual([1, 1, 1, '8:30'], s[0])
+       
         
     def test_buscar_sessao(self):
-        ControllerSala.AdicionarSala(1,"livre")
+        ControllerSessao.IniciarSessao()
         
-        a = ControllerSala.BuscarSala(1)
-        self.assertEqual(1,a[0])
-        self.assertEqual("livre",a[1])
-
-        
-    def test_buscar_sessoes(self):
-        ControllerSala.AdicionarSala(1,"livre")
-        ControllerSala.AdicionarSala(2,"ocupado")
-
-        a = ControllerSala.ListarSala()
+        a = ControllerSessao.ListarSessao()
         a = len(a)
         self.assertEqual(2,a)
-
         
     def test_remover(self):
-        ControllerSala.AdicionarSala(1,"livre")
-        ControllerSala.RemoverSala(1)
-        a = ControllerSala.BuscarSala(1)
-        self.assertIsNone(a)
-        
-    def test_remover_todos(self):
-        ControllerSala.AdicionarSala(1,"livre")
-        ControllerSala.AdicionarSala(2,"ocupado")
-        a = ControllerSala.RemoverTodasSalas()
-        self.assertEqual([], a)
-        
-    def test_iniciar_sala(self):
-        ControllerSala.IniciarSala()
-        sala = ControllerSala.ListarSala()
-        self.assertEqual(2, len(sala))
+        ControllerSessao.CriarSessao(1,1,1,"8h30")
+        a = ControllerSessao.RemoverSessao(1)
+        self.assertEqual(True,a)
+   
+    def test_iniciar_sessao(self):
+        ControllerSessao.IniciarSessao()
+        s = ControllerSessao.ListarSessao()
+        self.assertEqual(2, len(s))
 
             
 if __name__ == '__main__':

@@ -1,7 +1,7 @@
 import unittest
 import ControllerIngresso
 
-class TestElenco(unittest.TestCase):
+class TestIngresso(unittest.TestCase):
     def setUp(self):
         ControllerIngresso.RemoverTodosIngresso()
 

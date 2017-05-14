@@ -13,7 +13,7 @@ def RecuperarSessao(cod_sessao):
     return None
 
 def VerificarLotacao(cod_sessao):
-    pass
+    print (sessao(cod_sessao))
 
 def ListarSessao():
     global sessao
